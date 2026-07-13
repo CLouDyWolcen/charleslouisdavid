@@ -19,7 +19,7 @@ export const profile: Profile = {
       icon: "github"
     },
     {
-      platform: "Google Chat",
+      platform: "Email",
       url: "mailto:charleslouis.david@dssc.edu.ph",
       icon: "google"
     }
