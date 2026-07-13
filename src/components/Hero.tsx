@@ -110,7 +110,7 @@ const Hero = ({ name, title, tagline }: HeroProps) => {
             </div>
 
             {/* Scroll indicator - visible on desktop */}
-            <div className="hidden lg:flex pt-4 animate-fade-in" style={{ animationDelay: '1s' }}>
+            <div className="hidden lg:flex pt-2 animate-fade-in" style={{ animationDelay: '1s' }}>
               <div className="flex flex-col items-center lg:items-start gap-2">
                 <span className="text-dark-400 text-sm font-mono">Scroll to explore</span>
                 <div className="w-6 h-10 border-2 border-primary-500/30 rounded-full flex items-start justify-center p-1">
@@ -153,7 +153,7 @@ const Hero = ({ name, title, tagline }: HeroProps) => {
         </div>
 
         {/* Scroll indicator - visible on mobile/tablet, centered */}
-        <div className="lg:hidden pt-8 animate-fade-in" style={{ animationDelay: '1s' }}>
+        <div className="lg:hidden pt-4 animate-fade-in" style={{ animationDelay: '1s' }}>
           <div className="flex flex-col items-center gap-2">
             <span className="text-dark-400 text-sm font-mono">Scroll to explore</span>
             <div className="w-6 h-10 border-2 border-primary-500/30 rounded-full flex items-start justify-center p-1">
