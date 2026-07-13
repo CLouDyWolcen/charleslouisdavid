@@ -15,13 +15,8 @@ export const profile: Profile = {
   socialLinks: [
     {
       platform: "GitHub",
-      url: "https://github.com/charleslouis-david",
+      url: "https://github.com/CLouDyWolcen",
       icon: "github"
-    },
-    {
-      platform: "LinkedIn",
-      url: "https://linkedin.com/in/charleslouis-david",
-      icon: "linkedin"
     },
     {
       platform: "Google Chat",

@@ -19,6 +19,6 @@ export const skillCategories: SkillCategory[] = [
   },
   {
     category: "Productivity Tools",
-    skills: ["Microsoft Office", "Google Workspace", "Canva", "Technical Documentation"]
+    skills: ["Microsoft Office", "Google Workspace", "Technical Documentation"]
   }
 ];
