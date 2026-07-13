@@ -17,11 +17,6 @@ export const profile: Profile = {
       platform: "GitHub",
       url: "https://github.com/CLouDyWolcen",
       icon: "github"
-    },
-    {
-      platform: "Email",
-      url: "mailto:charleslouis.david@dssc.edu.ph",
-      icon: "google"
     }
   ]
 };
