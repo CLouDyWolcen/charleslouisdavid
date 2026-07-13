@@ -82,7 +82,7 @@ const Hero = ({ name, title, tagline }: HeroProps) => {
             </p>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row items-center lg:items-start justify-center lg:justify-start gap-3 pt-6 animate-slide-up" style={{ animationDelay: '0.8s' }}>
+            <div className="flex flex-col sm:flex-row items-center lg:items-start justify-center lg:justify-start gap-3 pt-2 animate-slide-up" style={{ animationDelay: '0.8s' }}>
               <button
                 onClick={scrollToContact}
                 className="btn-primary group text-sm sm:text-base px-6 py-3"
@@ -110,7 +110,7 @@ const Hero = ({ name, title, tagline }: HeroProps) => {
             </div>
 
             {/* Scroll indicator - visible on desktop */}
-            <div className="hidden lg:flex pt-8 animate-fade-in" style={{ animationDelay: '1s' }}>
+            <div className="hidden lg:flex pt-4 animate-fade-in" style={{ animationDelay: '1s' }}>
               <div className="flex flex-col items-center lg:items-start gap-2">
                 <span className="text-dark-400 text-sm font-mono">Scroll to explore</span>
                 <div className="w-6 h-10 border-2 border-primary-500/30 rounded-full flex items-start justify-center p-1">
@@ -132,7 +132,7 @@ const Hero = ({ name, title, tagline }: HeroProps) => {
                 <div className="relative bg-gradient-to-br from-dark-800 to-dark-900 rounded-3xl p-3 border border-primary-500/30">
                   <div className="relative overflow-hidden rounded-2xl">
                     <img 
-                      src="/images/projects/me.webp" 
+                      src="/charleslouisdavid/images/projects/me.webp" 
                       alt="Charles Louis C. David" 
                       className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
                       style={{ objectPosition: '40% 30%' }}
@@ -153,7 +153,7 @@ const Hero = ({ name, title, tagline }: HeroProps) => {
         </div>
 
         {/* Scroll indicator - visible on mobile/tablet, centered */}
-        <div className="lg:hidden pt-16 animate-fade-in" style={{ animationDelay: '1s' }}>
+        <div className="lg:hidden pt-8 animate-fade-in" style={{ animationDelay: '1s' }}>
           <div className="flex flex-col items-center gap-2">
             <span className="text-dark-400 text-sm font-mono">Scroll to explore</span>
             <div className="w-6 h-10 border-2 border-primary-500/30 rounded-full flex items-start justify-center p-1">
