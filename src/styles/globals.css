@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-dark-900 text-dark-50 antialiased;
+    scroll-behavior: smooth;
+  }
+
+  ::selection {
+    @apply bg-primary-500 text-white;
+  }
+}
+
+@layer components {
+  /* Unique geometric background pattern */
+  .bg-pattern {
+    background-color: #0f172a;
+    background-image: 
+      linear-gradient(30deg, #1e293b 12%, transparent 12.5%, transparent 87%, #1e293b 87.5%, #1e293b),
+      linear-gradient(150deg, #1e293b 12%, transparent 12.5%, transparent 87%, #1e293b 87.5%, #1e293b),
+      linear-gradient(30deg, #1e293b 12%, transparent 12.5%, transparent 87%, #1e293b 87.5%, #1e293b),
+      linear-gradient(150deg, #1e293b 12%, transparent 12.5%, transparent 87%, #1e293b 87.5%, #1e293b),
+      linear-gradient(60deg, #334155 25%, transparent 25.5%, transparent 75%, #334155 75%, #334155),
+      linear-gradient(60deg, #334155 25%, transparent 25.5%, transparent 75%, #334155 75%, #334155);
+    background-size: 80px 140px;
+    background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;
+  }
+
+  /* Unique gradient text effect */
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary-400 via-accent-400 to-primary-500 bg-clip-text text-transparent;
+  }
+
+  /* Glowing border card effect */
+  .glow-card {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .glow-card::before {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    background: linear-gradient(45deg, #0ea5e9, #d946ef, #0ea5e9);
+    border-radius: inherit;
+    opacity: 0;
+    transition: opacity 0.3s;
+    z-index: -1;
+    background-size: 200% 200%;
+    animation: gradient-shift 3s ease infinite;
+  }
+
+  .glow-card:hover::before {
+    opacity: 1;
+  }
+
+  @keyframes gradient-shift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+
+  /* Animated underline link */
+  .link-underline {
+    @apply relative inline-block;
+  }
+
+  .link-underline::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary-500 to-accent-500 transition-all duration-300;
+  }
+
+  .link-underline:hover::after {
+    @apply w-full;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-dark-800;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-gradient-to-b from-primary-600 to-accent-600 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply from-primary-500 to-accent-500;
+  }
+
+  /* Animated button with unique effect */
+  .btn-primary {
+    @apply relative px-8 py-4 bg-gradient-to-r from-primary-600 to-primary-500 text-white font-semibold rounded-lg overflow-hidden transition-all duration-300;
+    box-shadow: 0 4px 15px rgba(14, 165, 233, 0.3);
+  }
+
+  .btn-primary::before {
+    content: '';
+    @apply absolute inset-0 bg-gradient-to-r from-accent-600 to-accent-500 transition-opacity duration-300;
+    opacity: 0;
+  }
+
+  .btn-primary:hover::before {
+    opacity: 1;
+  }
+
+  .btn-primary span {
+    @apply relative z-10;
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(217, 70, 239, 0.4);
+  }
+
+  /* Section reveal animation */
+  .section-reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+
+  .section-reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Floating animation for decorative elements */
+  .float-animation {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  /* Unique skill badge design */
+  .skill-badge {
+    @apply relative px-3 py-2 bg-dark-800 text-dark-100 rounded-lg font-mono overflow-hidden;
+    border: 1px solid rgba(14, 165, 233, 0.2);
+    transition: all 0.3s;
+  }
+
+  .skill-badge::before {
+    content: '';
+    @apply absolute top-0 left-0 w-full h-full bg-gradient-to-r from-primary-600/20 to-accent-600/20 transition-opacity duration-300;
+    opacity: 0;
+  }
+
+  .skill-badge:hover {
+    transform: translateY(-3px);
+    border-color: rgba(14, 165, 233, 0.6);
+  }
+
+  .skill-badge:hover::before {
+    opacity: 1;
+  }
+
+  /* Project card with unique overlay */
+  .project-card {
+    @apply relative overflow-hidden rounded-2xl bg-dark-800 transition-all duration-500;
+    border: 1px solid rgba(14, 165, 233, 0.1);
+  }
+
+  .project-card::after {
+    content: '';
+    @apply absolute inset-0 bg-gradient-to-br from-primary-600/0 to-accent-600/0 transition-all duration-500;
+    opacity: 0;
+  }
+
+  .project-card:hover::after {
+    @apply from-primary-600/10 to-accent-600/10;
+    opacity: 1;
+  }
+
+  .project-card:hover {
+    transform: scale(1.02);
+    border-color: rgba(14, 165, 233, 0.3);
+    box-shadow: 0 20px 40px rgba(14, 165, 233, 0.2);
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
